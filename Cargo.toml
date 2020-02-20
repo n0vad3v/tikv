@@ -103,7 +103,7 @@ slog-term = "2.4"
 slog_derive = "0.1"
 spin = "0.5"
 sst_importer = { path = "components/sst_importer" }
-sysinfo = { git = "https://github.com/tikv/sysinfo.git", branch = "tikv"}
+sysinfo = { git = "https://github.com/tikv/sysinfo.git", branch = "kennytm/make-cache-size-test-only"}
 tempfile = "3.0"
 test_util = { path = "components/test_util" }
 tidb_query = { path = "components/tidb_query" }
@@ -148,6 +148,7 @@ test_sst_importer = { path = "components/test_sst_importer" }
 
 [replace]
 # TODO: remove this when new raft-rs is published.
+"grpcio:0.5.0-alpha.5" = { git = "https://github.com/glorv/grpc-rs", branch="aarch-bindgen", features = [ "openssl-vendored" ], default-features = false}
 "raft:0.6.0-alpha" = { git = "https://github.com/pingcap/raft-rs", branch = "master", default-features = false }
 "raft-proto:0.6.0-alpha" = { git = "https://github.com/pingcap/raft-rs", branch = "master", default-features = false }
 "protobuf:2.8.0" = { git = "https://github.com/nrc/rust-protobuf", branch = "v2.8" }

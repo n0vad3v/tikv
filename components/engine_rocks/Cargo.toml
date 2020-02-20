@@ -23,7 +23,7 @@ serde_derive = "1.0"
 slog = { version = "2.3", features = ["max_level_trace", "release_max_level_debug"] }
 slog-global = { version = "0.1", git = "https://github.com/breeswish/slog-global.git", rev = "0e23a5baff302a9d7bccd85f8f31e43339c2f2c1" }
 static_assertions = "1.1.0"
-sysinfo = { git = "https://github.com/tikv/sysinfo.git", branch = "tikv"}
+sysinfo = { git = "https://github.com/tikv/sysinfo.git", branch = "kennytm/make-cache-size-test-only"}
 tikv_alloc = { path = "../tikv_alloc" }
 tikv_util = { path = "../tikv_util" }
 time = "0.1"
@@ -35,9 +35,9 @@ rev = "d919ccd35976b9b84b8d03c07138c1cc05a36087"
 features = ["nightly", "push", "process"]
 
 [dependencies.rocksdb]
-git = "https://github.com/tikv/rust-rocksdb.git"
+git = "https://github.com/glorv/rust-rocksdb.git"
 package = "rocksdb"
-branch = "tikv-4.x"
+branch="aarch-bindgen"
 
 [dev-dependencies]
 tempfile = "3.0"
