@@ -152,6 +152,7 @@ zipf = "5.0.1"
 
 [replace]
 # TODO: remove this when new raft-rs is published.
+"grpcio:0.5.0-alpha.5" = { git = "https://github.com/glorv/grpc-rs", branch="aarch-bindgen", features = [ "openssl-vendored" ], default-features = false}
 "raft:0.6.0-alpha" = { git = "https://github.com/pingcap/raft-rs", branch = "master", default-features = false }
 "raft-proto:0.6.0-alpha" = { git = "https://github.com/pingcap/raft-rs", branch = "master", default-features = false }
 "protobuf:2.8.0" = { git = "https://github.com/nrc/rust-protobuf", branch = "v2.8" }
