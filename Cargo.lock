@@ -202,7 +202,7 @@ dependencies = [
  "futures 0.1.29",
  "futures-executor",
  "futures-util",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "keys",
  "kvproto",
@@ -391,9 +391,9 @@ dependencies = [
 
 [[package]]
 name = "cache-size"
-version = "0.4.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f9c0e5b187b377be086db3ee0de5cbf7bfb4a8c590b639af4d3facbdd07586ae"
+checksum = "81d993443a01668ca909379dac9de6e858121d7fb2bc16de939dc166164cac1c"
 dependencies = [
  "raw-cpuid",
 ]
@@ -446,7 +446,7 @@ dependencies = [
  "engine_traits",
  "failure",
  "futures 0.1.29",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "keys",
  "kvproto",
  "log",
@@ -562,7 +562,7 @@ dependencies = [
  "fs2",
  "futures 0.1.29",
  "futures-cpupool",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "keys",
  "kvproto",
@@ -1386,7 +1386,7 @@ version = "0.0.1"
 dependencies = [
  "byteorder",
  "failure",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "kvproto",
  "protobuf-build 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "tidb_query",
@@ -1478,8 +1478,7 @@ dependencies = [
 [[package]]
 name = "grpcio"
 version = "0.5.0-alpha.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1463096cfc371772d59a48fbfc471e18892e197efc5867b3bd7c2e0428e97824"
+source = "git+https://github.com/glorv/grpc-rs?branch=aarch-bindgen#b4684cbfbad4654c172dff8b8db6b6072a4f7011"
 dependencies = [
  "bytes 0.4.12",
  "futures 0.1.29",
@@ -1489,6 +1488,13 @@ dependencies = [
  "prost 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "protobuf 2.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
+
+[[package]]
+name = "grpcio"
+version = "0.5.0-alpha.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1463096cfc371772d59a48fbfc471e18892e197efc5867b3bd7c2e0428e97824"
+replace = "grpcio 0.5.0-alpha.5 (git+https://github.com/glorv/grpc-rs?branch=aarch-bindgen)"
 
 [[package]]
 name = "grpcio-compiler"
@@ -1507,13 +1513,13 @@ dependencies = [
 [[package]]
 name = "grpcio-sys"
 version = "0.5.0-alpha.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c8aebf59fdf3668edf163c1948ceca64c4ebb733d71c9055a12219d336bd5d51"
+source = "git+https://github.com/glorv/grpc-rs?branch=aarch-bindgen#b4684cbfbad4654c172dff8b8db6b6072a4f7011"
 dependencies = [
  "bindgen",
  "cc",
  "cmake",
  "libc",
+ "libz-sys",
  "openssl-sys",
  "pkg-config",
  "walkdir",
@@ -1854,7 +1860,7 @@ source = "git+https://github.com/pingcap/kvproto.git#528e82bf724834aad85f56808e4
 dependencies = [
  "bytes 0.4.12",
  "futures 0.1.29",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static",
  "prost 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "prost-derive 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1932,7 +1938,7 @@ dependencies = [
 [[package]]
 name = "librocksdb_sys"
 version = "0.1.0"
-source = "git+https://github.com/tikv/rust-rocksdb.git#6191b41497ee35234b1a2c1bbd6691787fe65537"
+source = "git+https://github.com/glorv/rust-rocksdb.git?branch=aarch-bindgen#22dc4ba3fb4f045745692256d1254145c4a69187"
 dependencies = [
  "bindgen",
  "bzip2-sys",
@@ -1950,7 +1956,7 @@ dependencies = [
 [[package]]
 name = "libtitan_sys"
 version = "0.0.1"
-source = "git+https://github.com/tikv/rust-rocksdb.git#6191b41497ee35234b1a2c1bbd6691787fe65537"
+source = "git+https://github.com/glorv/rust-rocksdb.git?branch=aarch-bindgen#22dc4ba3fb4f045745692256d1254145c4a69187"
 dependencies = [
  "bzip2-sys",
  "cc",
@@ -2546,7 +2552,7 @@ name = "pd_client"
 version = "0.1.0"
 dependencies = [
  "futures 0.1.29",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "kvproto",
  "lazy_static",
@@ -3063,7 +3069,7 @@ dependencies = [
  "futures 0.1.29",
  "futures-executor",
  "futures-util",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "into_other",
  "keys",
@@ -3431,7 +3437,7 @@ checksum = "cabe4fa914dec5870285fa7f71f602645da47c486e68486d2b4ceb4a343e90ac"
 [[package]]
 name = "rocksdb"
 version = "0.3.0"
-source = "git+https://github.com/tikv/rust-rocksdb.git#6191b41497ee35234b1a2c1bbd6691787fe65537"
+source = "git+https://github.com/glorv/rust-rocksdb.git?branch=aarch-bindgen#22dc4ba3fb4f045745692256d1254145c4a69187"
 dependencies = [
  "libc",
  "librocksdb_sys",
@@ -3916,7 +3922,7 @@ dependencies = [
  "futures 0.1.29",
  "futures-executor",
  "futures-util",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "keys",
  "kvproto",
@@ -4056,7 +4062,7 @@ dependencies = [
 [[package]]
 name = "sysinfo"
 version = "0.9.6"
-source = "git+https://github.com/tikv/sysinfo.git?branch=tikv#aa98faff1c586984857506c8add248ee304a7f81"
+source = "git+https://github.com/tikv/sysinfo.git?branch=kennytm/make-cache-size-test-only#d42ff00af7a02c3cd7da84398dc69e658711e447"
 dependencies = [
  "cache-size",
  "cfg-if",
@@ -4148,7 +4154,7 @@ dependencies = [
  "engine_rocks",
  "futures 0.1.29",
  "futures-cpupool",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "keys",
  "kvproto",
@@ -4226,7 +4232,7 @@ dependencies = [
  "futures 0.1.29",
  "futures 0.3.1",
  "futures-cpupool",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "keys",
  "kvproto",
@@ -4409,7 +4415,7 @@ dependencies = [
  "futures-executor",
  "futures-locks",
  "futures-util",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "hyper",
  "into_other",
@@ -4508,7 +4514,7 @@ dependencies = [
  "futures 0.3.1",
  "futures-cpupool",
  "fxhash",
- "grpcio",
+ "grpcio 0.5.0-alpha.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex 0.3.2",
  "lazy_static",
  "libc",
